@@ -1,10 +1,10 @@
 #Angular and Static  Generator
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![Dependencies](https://david-dm.org/cedced19/generator-angular-static.png)](https://david-dm.org/cedced19/generator-angular-static)
-[![devDependencies](https://david-dm.org/cedced19/generator-angular-static/dev-status.png)](https://david-dm.org/cedced19/generator-angular-static#info=devDependencies)
-[![Build Status](https://travis-ci.org/cedced19/generator-angular-static.svg?branch=master)](https://travis-ci.org/cedced19/generator-angular-static)
-[![NPM version](https://badge.fury.io/js/generator-angular-static.svg)](http://badge.fury.io/js/generator-angular-static)
+[![Dependencies](https://david-dm.org/cedced19/generator-static-angular.png)](https://david-dm.org/cedced19/generator-static-angular)
+[![devDependencies](https://david-dm.org/cedced19/generator-static-angular/dev-status.png)](https://david-dm.org/cedced19/generator-static-angular#info=devDependencies)
+[![Build Status](https://travis-ci.org/cedced19/generator-static-angular.svg?branch=master)](https://travis-ci.org/cedced19/generator-static-angular)
+[![NPM version](https://badge.fury.io/js/generator-static-angular.svg)](http://badge.fury.io/js/generator-static-angular)
 
 
 Yeoman generator for a angular static project.
@@ -26,10 +26,10 @@ Bower:
 $ npm install -g bower
 ```
 
-Generator-angular-static:
+Generator-static-angular:
 
 ```bash
-$ npm install -g generator-angular-static
+$ npm install -g generator-static-angular
 ```
 
 ## Getting Started
@@ -37,7 +37,7 @@ $ npm install -g generator-angular-static
 Initiate the generator:
 
 ```bash
-$ yo angular-static
+$ yo static-angular
 ```
 
 To test:
