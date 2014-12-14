@@ -1,0 +1,49 @@
+{
+  "name": "generator-angular-static",
+  "version": "0.0.1",
+  "description": "Yeoman generator for a angular static project.",
+  "licenses": [
+    {
+        "type": "MIT",
+        "url": "http://cedced19.github.io/license/"
+    }
+  ],
+  "main": "app/index.js",
+  "repository": "cedced19/generator-angular-static",
+  "author": {
+    "name": "Cédric",
+    "email": "cedced19@gmail.com",
+    "url": "https://cedced19.github.io"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "html",
+    "angular",
+    "static",
+    "minify",
+    "basic",
+    "css",
+    "generator",
+    "grunt"
+  ],
+  "dependencies": {
+    "yeoman-generator": ">=0.17.1",
+    "chalk": "~0.5.1",
+    "yosay": "1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
