@@ -42,12 +42,15 @@ $ yo angular-static
 
 To test:
 ```bash
+$ npm install -g bower
+$ bower install
 $ npm install -g fast-http-cli
 $ fast-http -o
 ```
 
 To compile:
 ```bash
+$ npm install
 $ npm install -g grunt-cli
 $ grunt
 ```
