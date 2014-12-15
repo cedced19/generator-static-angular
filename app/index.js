@@ -42,9 +42,47 @@ var StaticAngularGenerator = yeoman.generators.Base.extend({
     },{
       name: 'angular',
       message: 'Chose a Angular app name:'
+    },{
+    type: 'checkbox',
+    name: 'modules',
+    message: 'Which modules would you like to include?',
+    choices: [
+        {
+            value: 'animateModule',
+            name: 'angular-animate.js',
+            checked: false
+        }, {
+            value: 'cookiesModule',
+            name: 'angular-cookies.js',
+            checked: false
+        }, {
+            value: 'resourceModule',
+            name: 'angular-resource.js',
+            checked: false
+        }, {
+            value: 'routeModule',
+            name: 'angular-route.js',
+            checked: false
+        }, {
+            value: 'sanitizeModule',
+            name: 'angular-sanitize.js',
+            checked: false
+        }, {
+            value: 'touchModule',
+            name: 'angular-touch.js',
+            checked: false
+        }
+    ]
     }];
 
     this.prompt(prompts, function (props) {
+      var hasMod = function (mod) { return props.modules.indexOf(mod) !== -1; };
+      this.animateModule = hasMod('animateModule');
+      this.cookiesModule = hasMod('cookiesModule');
+      this.resourceModule = hasMod('resourceModule');
+      this.routeModule = hasMod('routeModule');
+      this.sanitizeModule = hasMod('sanitizeModule');
+      this.touchModule = hasMod('touchModule');
       this.title = props.title;
       this.description = props.description;
       this.name = props.name;
@@ -66,6 +104,36 @@ var StaticAngularGenerator = yeoman.generators.Base.extend({
       };
         }.bind(this));
       },
+    
+    bower: function () {
+        var bower = {
+            name: this._.slugify(this.title),
+            private: true,
+            version: '0.0.0',
+            dependencies: {}
+        };
+        var enabledComponents = [];
+        if (this.animateModule) {
+            bower.dependencies['angular-animate'] = '1.2.27';
+        }
+        if (this.cookiesModule) {
+            bower.dependencies['angular-cookies'] = '1.2.27';
+        }
+        if (this.resourceModule) {
+            bower.dependencies['angular-resource'] = '1.2.27';
+        }
+        if (this.routeModule) {
+            bower.dependencies['angular-route'] = '1.2.27';
+        }
+        if (this.sanitizeModule) {
+            bower.dependencies['angular-sanitize'] = '1.2.27';
+        }
+        if (this.touchModule) {
+            bower.dependencies['angular-touch'] = '1.2.27';
+        }
+        bower.dependencies.angular = '1.2.27';
+        this.write('bower.json', JSON.stringify(bower, null, 2));
+    },
 
 
     app: function () {
@@ -75,18 +143,12 @@ var StaticAngularGenerator = yeoman.generators.Base.extend({
 
       this.template('dev/index.html', 'dev/index.html');
       this.template('dev/scripts/app.js', 'dev/scripts/app.js');
-      this.copy('dev/scripts/angular.min.js', 'dev/scripts/angular.min.js');
       this.template('dev/styles/main.css', 'dev/styles/main.css');
       this.copy('_package.json', 'package.json');
       this.copy('gitignore', '.gitignore');
-      this.copy('_bower.json', 'bower.json');
       this.copy('jshintrc', '.jshintrc');
       this.template('Gruntfile.js', 'Gruntfile.js');
       this.template('README.md', 'README.md');
-    },
-
-
-    projectfiles: function () {
     }
   });
 
