@@ -1,8 +1,8 @@
 #Angular and Static  Generator
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![Dependencies](https://david-dm.org/cedced19/generator-static-angular.png)](https://david-dm.org/cedced19/generator-static-angular)
-[![devDependencies](https://david-dm.org/cedced19/generator-static-angular/dev-status.png)](https://david-dm.org/cedced19/generator-static-angular#info=devDependencies)
+[![Dependency Status](https://david-dm.org/cedced19/generator-static-angular.svg)](https://david-dm.org/cedced19/generator-static-angular)
+[![devDependency Status](https://david-dm.org/cedced19/generator-static-angular/dev-status.svg?style=flat-square)](https://david-dm.org/cedced19/generator-static-angular#info=devDependencies)
 [![Build Status](https://travis-ci.org/cedced19/generator-static-angular.svg?branch=master)](https://travis-ci.org/cedced19/generator-static-angular)
 [![NPM version](https://badge.fury.io/js/generator-static-angular.svg)](http://badge.fury.io/js/generator-static-angular)
 

@@ -112,26 +112,33 @@ var StaticAngularGenerator = yeoman.generators.Base.extend({
             version: '0.0.0',
             dependencies: {}
         };
-        var enabledComponents = [];
+        var version = '1.2.28';
+        this.components = [];
         if (this.animateModule) {
-            bower.dependencies['angular-animate'] = '1.2.27';
+            bower.dependencies['angular-animate'] = version;
+            this.components.push('ngAnimate');
         }
         if (this.cookiesModule) {
-            bower.dependencies['angular-cookies'] = '1.2.27';
+            bower.dependencies['angular-cookies'] = version;
+            this.components.push('ngCookies');
         }
         if (this.resourceModule) {
-            bower.dependencies['angular-resource'] = '1.2.27';
+            bower.dependencies['angular-resource'] = version;
+            this.components.push('ngResource');
         }
         if (this.routeModule) {
-            bower.dependencies['angular-route'] = '1.2.27';
+            bower.dependencies['angular-route'] = version;
+            this.components.push('ngRoute');
         }
         if (this.sanitizeModule) {
-            bower.dependencies['angular-sanitize'] = '1.2.27';
+            bower.dependencies['angular-sanitize'] = version;
+            this.components.push('ngSanitize');
         }
         if (this.touchModule) {
-            bower.dependencies['angular-touch'] = '1.2.27';
+            bower.dependencies['angular-touch'] = version;
+            this.components.push('ngTouch');
         }
-        bower.dependencies.angular = '1.2.27';
+        bower.dependencies.angular = version;
         this.write('bower.json', JSON.stringify(bower, null, 2));
     },
 
@@ -144,9 +151,8 @@ var StaticAngularGenerator = yeoman.generators.Base.extend({
       this.template('dev/index.html', 'dev/index.html');
       this.template('dev/scripts/app.js', 'dev/scripts/app.js');
       this.template('dev/styles/main.css', 'dev/styles/main.css');
-      this.copy('_package.json', 'package.json');
+      this.template('_package.json', 'package.json');
       this.copy('gitignore', '.gitignore');
-      this.copy('jshintrc', '.jshintrc');
       this.template('Gruntfile.js', 'Gruntfile.js');
       this.template('README.md', 'README.md');
     }

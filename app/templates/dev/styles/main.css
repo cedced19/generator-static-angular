@@ -73,7 +73,7 @@ header a:focus, main a:focus, footer a:focus {
     outline: thin dotted;
 }
 header a:hover, main a:hover, footer a:hover {
-    color: #d6a5f5;
+    color: #b7a5f5;
 }
 
 header {
