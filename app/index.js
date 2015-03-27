@@ -112,7 +112,7 @@ var StaticAngularGenerator = yeoman.generators.Base.extend({
             version: '0.0.0',
             dependencies: {}
         };
-        var version = '1.2.28';
+        var version = '1.3.15';
         this.components = [];
         if (this.animateModule) {
             bower.dependencies['angular-animate'] = version;
