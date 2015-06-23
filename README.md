@@ -1,6 +1,5 @@
 #Angular and Static  Generator
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Dependency Status](https://david-dm.org/cedced19/generator-static-angular.svg)](https://david-dm.org/cedced19/generator-static-angular)
 [![devDependency Status](https://david-dm.org/cedced19/generator-static-angular/dev-status.svg?style=flat-square)](https://david-dm.org/cedced19/generator-static-angular#info=devDependencies)
 [![Build Status](https://travis-ci.org/cedced19/generator-static-angular.svg?branch=master)](https://travis-ci.org/cedced19/generator-static-angular)
@@ -35,22 +34,24 @@ $ npm install -g generator-static-angular
 ## Getting Started
 
 Initiate the generator:
-
 ```bash
 $ yo static-angular
 ```
 
-To test:
+Install dependencies:
 ```bash
 $ npm install -g bower
+$ npm install -g gulp
+$ npm installl
 $ bower install
-$ npm install -g fast-http-cli
-$ fast-http -o
+```
+
+To test:
+```bash
+$ gulp serve
 ```
 
 To compile:
 ```bash
-$ npm install
-$ npm install -g grunt-cli
-$ grunt
+$ gulp
 ```

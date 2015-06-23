@@ -1,24 +1,23 @@
-#<%= title %>
-
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# <%= title %>
 
 <%= description %>
 
-To test:
+Install dependencies:
 ```bash
 $ npm install -g bower
+$ npm install -g gulp
+$ npm installl
 $ bower install
-$ npm install -g fast-http-cli
-$ fast-http -o
+```
+
+To test:
+```bash
+$ gulp serve
 ```
 
 To compile:
 ```bash
-$ npm install
-$ npm install -g grunt-cli
-$ grunt
+$ gulp
 ```
 
-See `Gruntfile.js` for task config.
-
-
+See `gulpfile.js` for task config.

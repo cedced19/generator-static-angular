@@ -1,4 +1,4 @@
-angular.module('<%= angular %>', [<%= components %>]) // TODO: add simples quotes
+angular.module('<%= angular %>', [<%= components %>])
 .controller('<%= angular %>Ctrl', [function() {
-    
+
 }]);
