@@ -33,7 +33,8 @@
     "basic",
     "css",
     "generator",
-    "grunt"
+    "gulp",
+    "fast"
   ],
   "dependencies": {
     "chalk": "~1.0.0",
